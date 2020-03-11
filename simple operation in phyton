@@ -91,3 +91,25 @@ print(bool(''))
 Galvanize Data Science Prep
 https://www.galvanize.com/data-science/prep
 '''
+# + -/* /
+print (20+3)
+print(type(20+3))
+print (20-3)
+print(type(20-3))
+print (20*3)
+print(type(20*3))
+print (20/3)
+print(type(20/3))
+print(int(20/3))
+print(type(int(20/3)))
+# // ** %
+print(20//3)
+print(type(20//3))
+print(float(20//3))
+print(type(20//3))
+print(20**3)
+print(type(20**3))
+print(float(20**3))
+print(20%3)
+print(type(20%3))
+print(float(20//3))
