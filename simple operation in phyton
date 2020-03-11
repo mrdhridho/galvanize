@@ -1,0 +1,93 @@
+'''
+* Perform simple calculations on basic numeric types in Python
+* Cast values from one type to another type using casting functions
+'''
+
+
+
+# simple and familiar operations
+print(1 + 7)
+
+print(9 * 33)
+
+# multiplication of an int by a float results in a float
+print(1.0 * 7)
+print(type(1.0 * 7))
+
+# division results in a float
+print(7 / 5)
+print(type(7 / 5))
+
+
+
+
+
+
+# floor division using ints
+print(8 // 3)
+print(type(8 // 3))
+
+# floor division using floats
+print(33.3 // 8.8)
+print(type(33.3 // 8.8))
+
+
+
+
+
+# interpret the results of these modulo operations
+print(8 % 3)
+
+print(1 % 33)
+
+
+
+
+# exponentiation
+print(2**3)
+
+print(5.32**5)
+
+
+
+
+
+# Explicitly define unclear order of operations
+print(7 + 3**3 * 9 / 36)
+print((7 + 3**3) * 9 / 36)
+
+
+# what's going wrong here?
+print(9(33 + 6))
+
+
+
+
+
+# simple casting of float to int
+print(int(33.3))
+print(type(int(33.3)))
+
+# flooring the result of multiplication of an int and a float
+print(int(3.3 * 42))
+
+
+
+
+
+# these two print statements should error, comment them out
+print(float('a'))
+print(int('a'))
+
+# this converts to True
+print(bool('a'))
+
+# this converts to False
+print(bool(''))
+
+
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
