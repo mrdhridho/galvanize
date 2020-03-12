@@ -42,3 +42,14 @@ print(f' your int is : {c}')
 d=int(input('type an int : '))
 print(type(d))
 print(f' your int is : {d}')
+z = 21
+print(z)
+z /= 3
+print(z)
+z *= 2.1
+print(z)
+z = int(z)
+print(z)
+z **= 2
+print(z)
+print(14*14)
