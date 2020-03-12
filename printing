@@ -1,0 +1,44 @@
+'''
+* Describe and use the `print()` function in Python
+'''
+
+
+# print out user-inputted value
+x = input('Please enter a number: ')
+print(x)
+
+
+
+# Use print statements to discover values referenced by variables
+y = 3
+y *= 21
+print(y)
+
+y = int(y / 7)
+print(y)
+
+y **= 2
+print(y)
+
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
+some_str = ' this is printing on the console'
+print(some_str)
+print('on the console will display {some_str}')
+print(f'on the console will display {some_str}')
+
+a = 3
+print(a)
+a += 2
+print(a)
+b = input('type you name : ')
+print(f'your name is {b}')
+c=input('type an int : ')
+print(type(c))
+print(f' your int is : {c}')
+d=int(input('type an int : '))
+print(type(d))
+print(f' your int is : {d}')
