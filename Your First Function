@@ -1,0 +1,54 @@
+Functions can be thought of as ways to create repeatable procedures
+'''
+* Describe and use the `print()` function in Python
+'''
+
+print('define a simple function')
+
+def mult_by_3_mod_7(some_number):
+    return (some_number * 3) % 7
+
+
+
+# call the function
+print(mult_by_3_mod_7(12))
+print(mult_by_3_mod_7(15))
+print(mult_by_3_mod_7(19))
+print(mult_by_3_mod_7(124))
+print(mult_by_3_mod_7(36))
+
+
+
+print('\ndefine functions that return a value or return None')
+def return_7():
+    return 7
+
+print(return_7())
+
+def print_7():
+    print(7)
+    # note that this function has no return
+
+print_7()
+print(print_7())
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
+def function(x):
+  return 5 * x
+print(function(6))
+
+def functions():
+ t = int(input('enter a num : '))
+ return t * 5
+print(functions())
+
+def twenty():
+  r = int(input('enter a number :'))
+  y = r
+  y += 3
+  y //= 2
+  return r * 5
+print(twenty())
