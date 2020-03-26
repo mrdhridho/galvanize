@@ -1,0 +1,25 @@
+'''
+* Describe the `string` type
+* Cast values to a `string`
+'''
+
+a = None
+
+print(type(None))
+print(a)
+
+
+
+def some_function():
+    x = 3 + 7
+    print(x)
+
+print(some_function())
+
+
+
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
