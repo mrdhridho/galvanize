@@ -1,0 +1,75 @@
+'''
+* Comprehensively describe and use the `float` datatype
+'''
+
+false_val = 0
+bool_false = bool(false_val)
+print(bool_false)
+
+
+true_val = 1
+bool_true = bool(true_val)
+print(bool_true)
+
+
+# some True values
+true1 = 'hey'
+true2 = 123.5
+true3 = -33
+
+true1_bool = bool(true1)
+true2_bool = bool(true2)
+true3_bool = bool(true3)
+
+print(true1_bool)
+print(true2_bool)
+print(true3_bool)
+
+
+# these are falsey
+false1 = ''
+false2 = None
+false3 = 0.0
+
+false1_bool = bool(false1)
+false2_bool = bool(false2)
+false3_bool = bool(false3)
+
+print(false1_bool)
+print(false2_bool)
+print(false3_bool)
+
+
+
+truth = not False
+print(truth)
+
+falsity = not True
+print(falsity)
+
+
+
+gt = 7 > 19
+print(type(gt))
+print(gt)
+
+
+lt = 6 < 7
+print(type(lt))
+print(lt)
+
+
+gte = 15 >= 15
+print(type(gte))
+print(gte)
+
+
+
+
+
+
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
