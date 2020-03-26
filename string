@@ -1,0 +1,31 @@
+'''
+* Describe the `string` type
+* Cast values to a `string`
+'''
+
+some_str = 'Hi, I am a string'
+
+print(type(some_str))
+print(len(some_str))
+print(some_str)
+
+
+str1 = 'Hello '
+str2 = 'You'
+
+full_str = str1 + str2
+
+print(full_str)
+
+# define your function here
+def create_three_digit_num(num1,num2,num3):
+    tambah = str(num3)+str(num2)+str(num1)
+    return int(tambah)
+  
+
+
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
