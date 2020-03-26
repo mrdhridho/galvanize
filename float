@@ -1,0 +1,54 @@
+'''
+* Comprehensively describe and use the `float` datatype
+'''
+
+red_balls = 30
+green_balls = 60
+
+prob_red = red_balls / (red_balls + green_balls)
+print(prob_red)
+
+
+
+def mult_x_and_y():
+    # get some input from a user
+    x = input('Input a value for x: ')
+
+    print(f'{x} is of type {type(x)}')
+
+
+    # convert that value to a float
+    print('\nconverting x')
+
+    x = float(x)
+    print(f'{x} is now of type {type(x)}')
+
+    # take in a second value and multiply the two
+    y = input('\nInput a value for y: ')
+    y = float(y)
+    print(f'{x} * {y} = {x*y}')
+
+print(mult_x_and_y())
+
+
+
+
+
+
+def equal_enough(float1, float2, difference):
+    if abs(float1 - float2) < difference:
+        return True
+    else:
+        return False
+
+print(equal_enough(3.00001, 3.00, .01))
+print(equal_enough(7.2, 7.1, .01))
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
+red_shirt = 30
+green_shirt = 60
+prob_red_shirt = red_shirt/(red_shirt+green_shirt)
+print(prob_red_shirt)
