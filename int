@@ -1,0 +1,86 @@
+'''
+* Describe and use the `print()` function in Python
+'''
+
+
+num_kittens = 0
+
+# you see one kitten
+num_kittens += 1
+
+# you see another kitten
+num_kittens += 1
+
+# you see two kittens in the corner of the box
+num_kittens += 2
+
+print(f'There are {num_kittens} kittens')
+
+
+
+
+
+def mult_x_and_y():
+    # get some input from a user
+    x = input('Input a value for x: ')
+
+    print(f'{x} is of type {type(x)}')
+
+
+    # convert that value to an int
+    print('\nconverting x')
+
+    x = int(x)
+    print(f'{x} is now of type {type(x)}')
+
+    # take in a second value and multiply the two
+    y = input('\nInput a value for y: ')
+    y = int(y)
+    print(f'{x} * {y} = {x*y}')
+
+mult_x_and_y()
+
+
+
+
+def get_middle_letter(some_word):
+    # first get the length
+    length_of_word = len(some_word)
+
+    return some_word[int(length_of_word / 2)+1]
+
+print(get_middle_letter('coldseptemberrain'))
+
+
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
+kitten = 0
+kitten += 1
+kitten += 1
+kitten += 2
+print(f'there are {kitten} kittens')
+
+a = input("input a value for a :")
+print(f'{a} is of type {type(a)}')
+
+print("\nconverting a")
+a = int(a)
+print(f' {a} is now {type(a)}')
+
+b = int(input("input a value for b :"))
+z = a * b
+print(f'{a} * {b} = {z}')
+
+def get_middle_letter(some_word):
+    # first get the length
+    length_of_word = len(some_word)
+
+    return some_word[int(length_of_word / 2)+1]
+
+print(get_middle_letter('coldseptemberrain'))
+
+for num in range(30):
+  print(num)
