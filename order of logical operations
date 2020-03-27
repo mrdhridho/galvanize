@@ -1,0 +1,21 @@
+'''
+* Understand the order in which Python interprets logical operators.
+'''
+
+print(not 7==2 or 3<1)
+
+
+print(3<3 and 5>1 or 4>1)
+
+print(3<3 and (5>1 or 4>1))
+
+print(not 3<5 or 8>=3 and 5==2)
+
+result1 = not (5 >= 5 or 3<7)
+result2 = not 5 >= 5 and not 3<7
+print(result1 == result2)
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
