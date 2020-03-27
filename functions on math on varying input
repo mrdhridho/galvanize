@@ -1,0 +1,31 @@
+'''
+* Use basic operators to build Python functions to calculate the results of common mathematical equations.
+'''
+
+def variance(x, y, z):
+  mean = (x + y + z)/3
+  numerator = ((x-mean)**2 + (y-mean)**2 + (z-mean)**2)
+  return numerator/3
+
+print(variance(1, 2, 3))
+print(variance(203, 192, 264))
+
+
+def sigmoid(x):
+  return 1 / (1 + 2.71828**(-x))
+
+print(sigmoid(10))
+print(sigmoid(-2))
+print(sigmoid(300))
+'''
+def euc_distance(x1, x2, y1, y2):
+  dist = ((x1-x2)**2 + (y1-y2)**2)**1/2
+  return dist
+'''
+def euc_distance(x1, y1, x2, y2):
+    dist = ((x1-x2)**2 + (y1-y2)**2)**(1/2)
+    return dist
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
