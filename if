@@ -1,0 +1,120 @@
+'''
+* Use `if` statements to run code only under certain conditions.
+* Describe what a condition is and be able to recognize and write conditional expressions. 
+* Explain why conditions must always evaluate to a boolean value (`True`, `False`).
+'''
+
+
+some_var = 5
+
+# checks if some_var is less than the integer 10
+if some_var < 10: 
+    print("some_var is less than 10")
+
+# checks if some_var is equal to the integer 5
+if some_var == 5: 
+    print("some_var is equal to 5")
+
+# checks if the integer 3 is greater than some_var
+if 3 > some_var:
+    print("3 is greater than some_var")
+
+
+
+
+some_var == 10
+
+# This code will fail because the condition is invalid.  Can you tell why?
+if some_var == 5:
+    print("Nope!")
+
+
+
+
+# Block A
+'''if [3, 5, 4] > 2:
+    print("Block A")
+'''
+# the `len()` function takes a collected type (in this case a list) and returns the length as a positive integer
+# Block B
+if len([3, 5, 4]) > 2:
+    print("Block B")
+
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
+some_int = int(input('enter an int : '))
+
+if some_int == 200:
+  print(f'{some_int} is equals to 200')
+
+if some_int > 200:
+  print(f'{some_int} is greater than 200')
+
+if some_int < 200:
+  print(f'{some_int} is less than 200')
+
+'''
+Write a function called is_it_five that takes a single number as its input. If the number is 5, then the function will return True. If the number is not 5, then the function should return None.
+'''
+# define your function here
+def is_it_five(x):
+    if x == 5:
+        return True
+    return None
+    """
+    Notice here that the function returns True if the input is 5. However, it returns None in all other cases.
+    """
+'''
+The following code snippet prints the value of x if x is greater than 10. Change the given code to print x if x is less than 10.(In this challenge, you can assume x is already defined before your code is run.)
+'''
+if x < 10:
+    print(x)
+    """
+    One of the advantages of python is its natural-ish syntax. The above expression reads very naturally to English speakers who have studied mathematics as being a check on whether x is less than 10. If you ran into issues around indentation just keep at it, you will improve with time.
+    """
+'''
+What is the value of x after the following code executes?
+
+x = 10
+if x > 10:
+    x += 1
+'''
+10
+  """
+  When x is evaluated by the if statement, it is not greater than 10, so the code block indented under the if line is skipped.
+  """
+'''
+The following code snippet prints the value of x if x equals 1. Change the code to print the value of x if x does not equal 1. (In this challenge, you can assume x is already defined before your code is run.)
+'''
+if x != 1:
+    print(x)
+    """
+    if x != 1:
+    print(x)
+Once again the syntax should feel natural. The != (sometimes called bang-equals) is a relatively common syntax for not-equals. There are other ways to do this in python:
+
+if not (x == 1):
+    print(x)
+will also work. Here we are using the not keyword which negates whatever comes after it. so:
+
+In [1]: not True
+Out[1]: False
+
+In [2]: not False
+Out[2]: True
+
+In [3]: not not True
+Out[3]: True
+
+In [4]: not not False
+Out[4]: False
+Since (x == 1) resolves to a Boolean, putting a not in front of it is equivalent checking (x != 1). However, x != 1 is the preferred syntax as it is both shorter and clearer to other python programmers.
+"""
+'''
+Correct the following code to increment x by 1 if and only if x is greater than or equal to 10. (In this challenge, you can assume x is already defined before your code is run, and you don't need to print x afterward.)
+'''
+if x >= 10:
+  x += 1
