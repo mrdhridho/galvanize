@@ -1,0 +1,46 @@
+There are three basic logical operators:
+
+not
+not True evaluates to False
+not False evaluates to True
+and
+True and True evaluates to True
+True and False evaluates to False
+False and True evaluates to False
+or
+True or True evaluates to True
+True or False evaluates to True
+False or True evaluates to True
+False or False evaluates to False
+These logical operators are used to create compound conditions. Regarding order of evaluation, not precedes and, which precedes or. It is always recommended that you use parentheses to keep your logic clear by using parentheses.
+====
+'''
+* Describe the conditional keywords and how they work together
+* Use and understand `if`, `elif` and `else` to write code that only executes under certain conditions
+'''
+
+num = int(input('Enter an integer: '))
+
+if num % 2 == 0 and num % 3 == 0:
+    print('{} is divisible by both 2 and 3'.format(num))
+elif num % 3 == 0:
+    print('{} is divisible by 3'.format(num))
+elif num % 2 == 0:
+    print('{} is divisible by 2'.format(num))
+else:
+    print('{} is divisible by neither 2 or 3'.format(num))
+
+
+
+some_string = input('Enter a string of length between 3 and 10 characters: ')
+
+if not (len(some_string) < 3 or len(some_string) > 10):
+    print('{} is a good string length'.format(some_string))
+else:
+    print('{} is not between the appropriate bounds'.format(some_string))
+
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
