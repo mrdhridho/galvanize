@@ -1,0 +1,269 @@
+=>else
+ else will execute if no other conditions are met
+ else block appears not to have a condition
+ In other words, the word "else" can be read to mean "under all other conditions".
+=>elif
+ elif is short for "else-if".
+ start with if, and else acts as an end
+ elif and else are not required for valid code.
+Common mistakes
+This else is not preceded by an if or an elif so it is invalid
+
+num = int(input('Enter a number: '))
+
+if num == 5:
+    print("num equals 5")
+elif num == 10:
+    print("num equals 10")
+else:
+    print("num does not equal 5 or 10")
+# the above chain of conditions is finished
+
+# the code below will throw an error because it is not preceded by an `if`
+elif num == 12:
+    print("this is invalid")
+
+# the code below will throw an error because it is not preceded by an `if` or an `elif`
+else:
+    print("this is invalid")
+ ===
+ ==
+ =
+ '''
+* Describe the conditional keywords and how they work together
+* Use and understand `if`, `elif` and `else` to write code that only executes under certain conditions
+'''
+'''
+# num = int(input('Enter a number: '))
+
+
+
+if num > 30: # Block A
+    # this code ONLY executes when the condition from **this block (Block A)** is `True`
+    print(num * 3)
+else: # Block B
+    # this code ONLY executes when the condition from **the block directly above (also Block A)** is `False`
+    print(num + 90)
+
+# this code always executes no matter what
+print('We\'re done')
+
+
+
+
+# note that the num variable can be ANY number.
+num = int(input('Enter a number: '))
+
+if num == 5:
+    print("num equals 5")
+else: # this is like saying in any case where num is anything other than 5
+    print("num is something other than 5")
+
+print("this line doesn't care about the conditions above")
+
+
+
+
+num = int(input('Enter a number: '))
+
+if num == 10: # Block A
+    print("`num == 10` resolves to `True`")
+elif num > 20 and num < 50: # Block B # the condition in this elif is only considered when the condition is Block A is `False`  
+    print("`num > 20 and num < 50` resolves to `True`")
+elif num == 60: # Block C # this condition is only considered when all prior conditions resolve to `False`
+    print("`num == 60` resolves to `True`")
+else: # Block D # in ALL other circumstances
+    print("all of the prior conditions resolved to `False`")
+
+
+
+
+num = int(input('Enter a number: '))
+
+if num == 5:
+    print("num equals 5")
+elif num == 10:
+    print("num equals 10")
+else:
+    print("num does not equal 5 or 10")
+# the above chain of conditions is finished
+
+# the code below will throw an error because it is not preceded by an `if`
+elif num == 12:
+    print("this is invalid")
+
+# the code below will throw an error because it is not preceded by an `if` or an `elif`
+else:
+    print("this is invalid")
+
+
+
+
+
+num = 5
+
+if num <= 10:
+    num += 11
+    print("num:", num)
+
+elif num <= 20: # chaining off of the `if` above
+    num += 5
+    if num > 20: # this if is nested
+        print("num started out as less than or equal to  20 and now num is greater than 20")
+    else: # chaining off of the `if` directly above
+        print("num is less than 20")
+else:
+    print("num is greater than 20")
+
+
+
+
+menu_choice = input('Choose a food item: Burrito: (b), Pizza: (p), Sandwich: (s): ')
+
+if menu_choice == 'b':
+    menu_choice = input('Choose what kind of Burrito you\'d like: Bean and cheese: (a), Breakfast: (B)')
+    if menu_choice == 'a': print('You\'ll get a Bean and cheese Burrito')
+    elif menu_choice == 'b': print('You\'ll get a Breakfast Burrito')
+    else: print('We don\'t have that, sorry we\'re a crappy restaurant')
+
+elif menu_choice == 'p':
+    menu_choice = input('Choose what kind of Pizza you\'d like: Cheese: (a), Pepperoni: (B)')
+    if menu_choice == 'a': print('You\'ll get a Cheese Pizza')
+    elif menu_choice == 'b': print('You\'ll get a Pepperoni Pizza')
+    else: print('We don\'t have that, sorry we\'re a crappy restaurant')
+
+elif menu_choice == 's':
+    menu_choice = input('Choose what kind of Sandwich you\'d like: Ham: (a), PB&J: (B)')
+    if menu_choice == 'a': print('You\'ll get a Ham Sandwich')
+    elif menu_choice == 'b': print('You\'ll get a PB&J Sandwich')
+    else: print('We don\'t have that, sorry we\'re a crappy restaurant')
+
+else: print('We don\'t have that, sorry we\'re a crappy restaurant')
+
+'''
+'''
+usr_input = int(input("enter a num : "))
+
+if usr_input % 2 == 0:
+  print(f'{usr_input} is an even')
+
+else:
+  print(f'{usr_input} is an odd')
+'''
+'''
+usr_input = int(input("enter a num : "))
+
+if usr_input % 2 == 0:
+  print(f'{usr_input} is an even')
+elif usr_input % 3 == 0:
+  print(f'{usr_input} is divisable by 3')
+else:
+  print(f'{usr_input} is an odd')
+'''
+'''
+usr_input = int(input("enter a num : "))
+if usr_input % 2 == 0:
+  print(f'{usr_input} is an even')
+
+if usr_input % 3 == 0:
+  print(f'{usr_input} is divisable by 3')
+
+if usr_input % 6 == 0:
+  print(f'{usr_input} is divisible by 6, by 3 and an even')
+
+if usr_input % 5 == 0:
+  print(f'it means that {usr_input} is divisible by 5')
+
+if usr_input % 2 == 1:
+  print(f'{usr_input} is an odd')
+
+num = int(input('Enter a number: '))
+
+
+
+if num > 30: # Block A
+    # this code ONLY executes when the condition from **this block (Block A)** is `True`
+    print(num * 3)
+else: # Block B
+    # this code ONLY executes when the condition from **the block directly above (also Block A)** is `False`
+    print(num + 90)
+
+# this code always executes no matter what
+print('We\'re done')
+
+numbre = int(input("enter a numb : "))
+if numbre >= 45:
+  print(numbre * 2)
+else:
+  print(numbre + 30)
+#  else block appears not to have a condition
+print("hoammmmmmmmmmmmmmmmmmmmm")
+'''
+'''
+num = int(input('Enter a number: '))
+
+if num == 10: # Block A
+    print("`num == 10` resolves to `True`")
+elif num > 20 and num < 50: # Block B # the condition in this elif is only considered when the condition is Block A is `False`
+    print("`num > 20 and num < 50` resolves to `True`")
+elif num == 60: # Block C # this condition is only considered when all prior conditions resolve to `False`
+    print("`num == 60` resolves to `True`")
+else: # Block D # in ALL other circumstances
+    print("all of the prior conditions resolved to `False`")
+'''
+'''
+num = 12
+
+if num <= 10:
+    num += 11
+    print("num:", num)
+
+elif num <= 20: # chaining off of the `if` above
+    num += 5
+    if num > 20: # this if is nested
+        print("num started out as less than or equal to  20 and now num is greater than 20")
+    else: # chaining off of the `if` directly above
+        print("num is less than 20")
+else:
+    print("num is greater than 20")
+'''
+
+'''
+menu_choice = input('Choose a food item: Burrito: (b), Pizza: (p), Sandwich: (s): ')
+
+if menu_choice == 'b':
+    menu_choice = input('Choose what kind of Burrito you\'d like: Bean and cheese: (a), Breakfast: (b)')
+    if menu_choice == 'a': print('You\'ll get a Bean and cheese Burrito')
+    elif menu_choice == 'b': print('You\'ll get a Breakfast Burrito')
+    else: print('We don\'t have that, sorry we\'re a crappy restaurant')
+
+elif menu_choice == 'p':
+    menu_choice = input('Choose what kind of Pizza you\'d like: Cheese: (a), Pepperoni: (b)')
+    if menu_choice == 'a': print('You\'ll get a Cheese Pizza')
+    elif menu_choice == 'b': print('You\'ll get a Pepperoni Pizza')
+    else: print('We don\'t have that, sorry we\'re a crappy restaurant')
+
+elif menu_choice == 's':
+    menu_choice = input('Choose what kind of Sandwich you\'d like: Ham: (a), PB&J: (b)')
+    if menu_choice == 'a': print('You\'ll get a Ham Sandwich')
+    elif menu_choice == 'b': print('You\'ll get a PB&J Sandwich')
+    else: print('We don\'t have that, sorry we\'re a crappy restaurant')
+
+else: print('We don\'t have that, sorry we\'re a crappy restaurant')
+'''
+
+'''
+Write a function called five_or_three. This function takes a number as input, and will return True if that number is either 5 or 3. If the number is neither 5 or 3, then the function should return False.
+'''
+# define your function here
+def five_or_three(x):
+    if x == 5:
+        return True
+    elif x == 3:
+         return True
+    else:
+        return False
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
