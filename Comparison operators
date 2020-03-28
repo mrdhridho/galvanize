@@ -1,0 +1,105 @@
+Let's examine some common comparison operators
+
+== "equality" operator returns True if it's operands are equal
+Ex: 5 == 5 # -> True
+!= "inequality" operator returns True if it's operands are not equal
+Ex: 3 != 5 # -> True
+< "less than" operator returns True if the left operand is less than the right
+Ex: 3 < 5 # -> True
+> "greater than" operator returns True if the left operand is greater than the right
+Ex: 5 > 3 # -> True
+<= "less than or equal" operator returns True if the left operand is less than or equal to the right
+Ex: 3 < 5 # -> True
+Ex: 5 == 5 # -> True
+>= "greater than or equal" operator returns True if the left operand is greater than or equal to the right
+Ex: 5 > 3 # -> True
+Ex: 5 == 5 # -> True
+====
+In control flow the conditions you use must always resolve to a boolean value True or False. One common way of constructing an expression that resolves to a boolean value is to compare 2 objects using one of pythons built in comparison operators.
+
+
+For example.
+
+2 strings or integers can be said to be equal or not-equal,
+some integer or float can be said to be greater than, less than or equal to some other integer or float.
+==
+# comparing strings
+if 5 == 5:
+    print("hello there" == "hello there") # This will print `True`
+
+if 5 == 5:
+    print("hello" == "hi") # This will print `False`
+# strings can be said to be equal if they contain exactly the same content, as shown above
+==
+# comparing numbers
+if 5 == 5:
+    print(5 == 5) # This will print `True`
+
+if 5 == 5:
+    print(5 != 5) # This will print `False`
+# strings can be said to be equal if they contain exactly the same content, as shown above
+==
+=
+Fill in the contents of the is_old_enough_to_drink function. This function takes in a number, called age, and returns whether a person of this age old enough to legally drink in the United States. If the person is old enough to drink, the function should return True. If they are not old enough to drink in the united states, the function should return False. Notes:
+
+The legal drinking age in the United States is 21.
+output = is_old_enough_to_drink(22)
+print(output) # --> True
+---
+def is_old_enough_to_drink(age):
+    if age >= 21:
+        return True
+    else:
+        return False
+--
+def is_old_enough_to_drink(age):
+    return age >= 21
+ -
+ ---
+ Fill in the contents of the is_old_enough_to_drive function. This function takes in a number, called age, and returns whether a person of this age old enough to legally drive in the United States. If the person is old enough to drive, the function should return True. If they are not old enough to drive in the united states, the function should return False. Notes:
+
+The legal driving age in the United States is 16.
+output = is_old_enough_to_drive(15)
+print(output) # --> False
+--
+def is_old_enough_to_drive(age):
+    if age >= 16:
+        return True
+    else:
+        return False
+--
+def is_old_enough_to_drive(age):
+    return age >= 16
+-
+---
+Fill in the contents of the is_old_enough_to_vote function. This function takes in a number, called age, and returns whether a person of this age old enough to legally vote in the United States. If the person is old enough to vote, the functin should return True. If they are not old enugh to vote in the United States, the function should return False.
+
+Notes:
+
+The legal voting age in the United States is 18.
+output = is_old_enough_to_vote(22)
+print(output) # --> True
+--
+def is_old_enough_to_vote(age):
+    # your code here
+    if age >= 18:
+        return True
+    else:
+        return False
+--
+def is_old_enough_to_vote(age):
+    return age >= 18
+-
+---
+Write a function called is_old_enough_to_drink_and_drive. Given a number, in this case an age, is_old_enough_to_drink_and_drive returns whether a person of this given age is old enough to legally drink and drive in the United States. Notes:
+
+The legal drinking age in the United States is 21.
+It is always illegal to drink and drive in the United States.
+output = is_old_enough_to_drink_and_drive(22)
+print(output) # --> False
+--
+def is_old_enough_to_drink_and_drive(age):
+        return False
+--
+def is_old_enough_to_drink_and_drive(age):
+    return False
