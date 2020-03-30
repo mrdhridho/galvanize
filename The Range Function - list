@@ -1,0 +1,128 @@
+Use the Range function to:
+Generate a series of numbers starting at 0
+Generate a series of numbers starting at an arbitrary starting value
+Generate a series that "steps" by a value other than 1
+Convert a series of number into a list.
+---
+The Efficiency of range
+The ability to generate a series of numbers using the range function is of tremendous utility to a data scientist and anyone that works with Python. For example, If you need to create a list of all integers up to 100, manually inputting 100 numbers wouldn't be very efficient (or fun). Enter the range builtin. The syntax for using range is very intuitive, shown below:
+start = 0
+stop = 10
+step = 2
+
+print(range(start, stop, step))
+Parameters:
+start (optional), an integer number specifying at which position to start. Default is 0. Inclusive
+stop (required), an integer number specifying at which position to end. Non-inclusive.
+step (optional), an integer number specifying the incrementation. Default is 1.
+---
+Now, using range() by itself won't actually return a list. It will return, unsurprisingly, a range type:
+# showing the type of the range function
+print(type(range(10)))
+Therefore, in order to use the range function as a list, you will have to wrap it in a list(), shown below:
+
+# a list created by using range from 0 to 100, incrementing by 1
+my_list = list(range(100))
+
+print(my_list)
+----
+Note that when wrapping range() in list(), you must use the keyword and the parentheses; the shorthand brackets [] will not work.
+----
+# a list created by using range from 3 to 9, incrementing by 1
+list_1 = list(range(3, 10))
+print(list_1)
+# a list created by using range from 10 to 50, incrementing by 5
+list_2 = list(range(10, 51, 5))
+print(list_2)
+# negative numbers can be used as well
+list_3 = list(range(-10, 0))
+print(list_3)
+
+list_4 = list(range(-100, 101, 10))
+print(list_4)
+---
+Once again, it is important to note that the stop parameter is non-inclusive while the start parameter is inclusive. This means that if you want to create a range from any number x to any other number y, you should use range(x, y+1).
+====
+1
+Creating a List
+Submitted on Today at 4:05 PM
+Create a list (using range()) named all_the_numbers that has the numbers from 500 up to and including 1000.
+----
+all_the_numbers = list(range(500,1001))
+----
+Notice how the stop parameter was 1001 since it is non-inclusive and you want the list to contain the number 1000.
+-
+---
+2
+Identifying the Correct Use of Range
+You want to create a list of all the numbers between 100 and 1000 (including 1000) that are evenly divisible by 10. How should you do this?
+----
+range(100, 1001, 10)
+---
+range(100, 1000, 10) wouldn't include 1000 since the stop parameter is non-inclusive.
+range(99, 1001, 10) is close, however it includes 99, which you don't want.
+range(99, 1000, 1) is wrong on all accounts - includes 99, doesn't include 1000 and is using the wrong incrementer.
+range(100, 1001, 10) - Bingo! Starts at 100, includes 1000 since the stop parameter is 1001, and uses the correct incrementer in order for every number to be divisible by 10.
+===
+'''
+* Create a list
+* Distinguish Scalar values from collections
+* Recognize a list
+'''
+
+
+start = 0
+stop = 10
+step = 2
+
+print(range(start, stop, step))
+
+
+
+
+print(type(range(10)))
+
+
+
+
+# a list created by using range from 0 to 100, incrementing by 1
+my_list = list(range(100))
+
+print(my_list)
+
+
+
+
+
+
+# a list created by using range from 3 to 9, incrementing by 1
+list_1 = list(range(3, 10))
+print(list_1)
+
+
+
+
+
+
+# a list created by using range from 10 to 50, incrementing by 5
+list_2 = list(range(10, 51, 5))
+print(list_2)
+
+
+
+
+
+
+# negative numbers can be used as well
+list_3 = list(range(-10, 0))
+print(list_3)
+
+list_4 = list(range(-100, 101, 10))
+print(list_4)
+
+
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
