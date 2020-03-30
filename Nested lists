@@ -67,6 +67,14 @@ second_nest = first_nest[0]
 
 20 in second_nest
 20 not in dear_god[0][1] - This is effectively the same as saying 20 in 20 which throws an error since integers aren't iterable.
+---
+4
+Slice a nested `list`
+Submitted on Today at 9:38 PM
+Given the list: last_one_i_promise = ['I','hate', [[['this','so','much']]]], how would you slice the sublist ['so','much'] and assign them to a new variable x?
+x = last_one_i_promise[2][0][0][1:] - Correct answer.
+x = last_one_i_promise[1][1:] - Results in 'ate'.
+x = last_one_i_promise[2][1][0][1:] - Throws an error since the [['this','so','much']] doesn't have a second element.
 =========
 '''
 * Create a nested list.
