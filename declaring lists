@@ -1,0 +1,67 @@
+Create a list
+Distinguish Scalar values from collections
+Recognize a list
+==There are multiple ways to create a list.
+
+Declare lists using the syntax some_list = [] or some_list = list()
+Create lists with values, like some_list = [3, 2, 9, 18, 34]
+Create lists filled with one value, like some_list = [7] * 10
+===
+'''
+* Create a list
+* Distinguish Scalar values from collections
+* Recognize a list
+'''
+
+list_example_1 = ['I', 'am', 'a', 'series', 'of', 'expressions']
+
+
+# creating an empty list by using brackets - this is most common
+list_example_3 = []
+
+
+# creating an empty list by calling the list keyword also works
+list_example_2 = list()
+
+
+some_list = [] # this is most common
+another_list = list() # this works too
+
+
+
+list_of_nums = [3, 2, 9, 18, 34]
+print(list_of_nums)
+
+list_of_mixed_types = [True, 14, 'cat', [76, 33.3]]
+print(list_of_mixed_types)
+
+
+
+cat_list = ['cat'] * 3
+# cat_list = ['cat'] + ['cat'] + ['cat'] # equivalent
+print(cat_list)
+
+
+
+scalar_string = 'I am not a series of expressions, I am string. This means I am a sequence of characters.'
+
+list_example_4 = ['lists', 'can', 'contain', 'numbers', 'like', 10]
+
+list_example_5 = ['they', 'can', 'also', 'contain', ['other', 'lists', 'like', 'this', 'one'], 'in', 'addition', 'to', 'numbers', 'such', 'as', 2, 3, 4]
+
+# how tell if something is a list:
+
+print(type(scalar_string))
+
+print(type(list_example_3))
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
+my_list = [1, 2, 3, 4,5]*2
+another_list = [1, 2, 3, 6, 7]
+mixed_types_list = ['gaga', 45, [3.4, 'saya']]
+print(mixed_types_list)
+print(another_list)
+print(my_list)
+===
