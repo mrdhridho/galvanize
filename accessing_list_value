@@ -1,0 +1,125 @@
+Accessing list values
+Learning Objectives
+By the end of this lesson you will be able to:
+Access an element in a list
+Modify an element in a list
+"Unpack" a list
+===
+you will learn how to access the elements within a list, along with modifying the contents of a list.
+
+Indices and Accessing elements/values in lists
+
+Python uses zero-based indexing for lists and tuples. This means that the first element in a list is at index 0, the second element is at index 1, the third at index 2, etc.
+
+some_list[0] to access the first element in the list.
+some_list[1] to acces the second element in the list.
+some_list[2] to acces the third element in the list.
+You can also index into a list (or other collection) using negative numbers:
+
+some_list[-1] to access the last value of a list.
+some_list[-2] to access the second to last value of a list.
+animal_list = ['cat', 'dog', 'bird', 'horse']
+
+print('the first animal in the list is {}'.format(animal_list[0]))
+
+print('the second animal in the list is {}'.format(animal_list[1]))
+
+print('the last animal in the list is {}'.format(animal_list[-1]))
+===
+'''
+* Create a list
+* Distinguish Scalar values from collections
+* Recognize a list
+'''
+
+animal_list = ['cat', 'dog', 'bird', 'horse']
+
+print('the first animal in the list is {}'.format(animal_list[0]))
+
+print('the second animal in the list is {}'.format(animal_list[1]))
+
+print('the last animal in the list is {}'.format(animal_list[-1]))
+
+
+
+
+animal_list = ['platypus', 'beaver', 'hawk']
+
+animal_list[0] = 'dolphin'
+
+print(animal_list)
+
+# creating a list of the integers 0 through 9
+my_list = list(range(10))
+
+# deleting the first element within the list
+# Note that the indices of the remaining elements will "shift" by -1
+del my_list[0]
+
+
+
+
+# cat_list composed of 3 elements
+cat_list = ['bengal', 'siamese', 'sphinx']
+
+# unpacking cat_list - note that there are three new variables (cat1, cat2
+# and cat3), which is equal to the number of elements within cat_list
+cat1, cat2, cat3 = cat_list 
+
+print('{} {} {}'.format(cat1, cat2, cat3))
+
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
+fruits_list = ['banana', 'date', 'grape', 'cucumber']
+print(type(fruits_list))
+print(len(fruits_list))
+print(fruits_list)
+print(' the first fruit is {}' .format(fruits_list[0]))
+print(' the -1 fruit is {}'.format(fruits_list[-1]))
+print(' the -3 fruit is {}'.format(fruits_list[-3]))
+print('the fourth fruit is {}'.format(fruits_list[3]))
+
+list_sec= list(range(4))
+print(list_sec)
+del list_sec[0]
+print(list_sec)
+print(list_sec[0])
+a, b, c = list_sec
+print(list_sec)
+print('{} {} {}'.format(a,b,c))
+print('{}{}{}'.format(a,b,c))
+print(a)
+
+list_hewan = ['kutu', 'trenggiling', 'kecoak']
+
+print(list_hewan)
+print(len(list_hewan))
+print(id(list_hewan))
+print(type(list_hewan))
+print('hewan {}'.format(list_hewan[1]))
+print('hewan {} hewan {} hewan {}'.format(list_hewan[0],list_hewan[1],list_hewan[2]))
+list_hewan.append('kuda')
+print(list_hewan)
+print(id(list_hewan))
+===
+Modifying list Values
+<list_name>[<index_of_element_to_change>] = <new_value_for_index>
+animal_list = ['platypus', 'beaver', 'hawk']
+
+animal_list[0] = 'dolphin'
+
+print(animal_list)
+===
+List "unpacking"
+Data types that are "collections" tend to be able to be unpacked, where their elements can be placed into variables by using the assignment operator =. This is used most often with tuples, however it works with lists as well. In order to unpack a list (or tuple), the number of variables must be equal to the number of elements within the collection. This can be especially useful when the arguments that will be passed to a function are stored in a list.
+# cat_list composed of 3 elements
+cat_list = ['bengal', 'siamese', 'sphinx']
+
+# unpacking cat_list - note that there are three new variables (cat1, cat2
+# and cat3), which is equal to the number of elements within cat_list
+cat1, cat2, cat3 = cat_list
+
+print('{} {} {}'.format(cat1, cat2, cat3))
