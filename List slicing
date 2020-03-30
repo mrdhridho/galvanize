@@ -104,3 +104,89 @@ okay_i_get_it = enough_already[99:102]
 # or
 okay_i_get_it = enough_already[-102:-99]
 Above are the two ways of doing this - one using positive indices and one using negative indices.
+====================
+'''
+* Access a portion, or "slice" of a list
+* Save the accessed slice into a "sublist"
+'''
+
+a = 20
+n = 40
+
+num_list = list(range(a, n))
+
+print(num_list[0:5])
+print(num_list[10:])
+print(num_list[7:14])
+
+# Note that element at index -1 is not shown when slicing num_list
+# up until that index
+print(num_list[-1])
+print(num_list[-7:-1])
+
+
+
+start = 5
+stop = 15
+so_many_lists = list(range(start, stop))
+
+# get the first 5 elements
+print(so_many_lists[:5])
+
+# works with negative indexing as well - the below returns all elements except the last one
+print(so_many_lists[:-1])
+
+
+
+
+im_starting_to_hate_lists = list(range(10, 20))
+
+# get the last 5 elements
+print(so_many_lists[5:])
+
+# works with negative indexing as well
+print(so_many_lists[-5:])
+
+
+
+
+a = 10
+n = 20
+
+num_list = list(range(a, n))
+
+num_sublist = num_list[0:5]
+
+num_sublist[0] = 900
+print(num_list[0])
+print(num_sublist[0])
+
+
+
+
+
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
+my_int = list(range(50,65))
+print(my_int)
+print(my_int[:])
+print(my_int[10:])
+print(my_int[:10])
+print(my_int[1:])
+print(my_int[:-1])
+print(my_int[3:6])
+new_int = my_int[:-1]
+print(new_int)
+new_int[2] = 23
+print(new_int)
+print(new_int[:])
+print(new_int[2:])
+# don't change the line below this comment
+enough_already = list(range(-100, 101))
+okay_i_get_it = enough_already[:]
+print(enough_already[99:-99])
+enough_already = list(range(-100, 101))
+okay_i_get_it = enough_already[99:-99]
