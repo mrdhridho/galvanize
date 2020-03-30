@@ -1,0 +1,119 @@
+Nested lists
+Learning Objectives
+By the end of this lesson you will be able to:
+Create a nested list.
+Access an element from with a nested list.
+lists, sub-lists, sub-sub-lists, sub-sub-sub-lists, etc.
+----------------------
+Seeing as lists are collections, they can contain other lists. We call this a nested list, and this nested list can also contain a nested list. The ability to interact with arbitrarily nested lists is an important skill as it carries over to interacting with all nested objects that you can run into.
+--
+Creating a nested list
+Creating a nested list is quite easy; when creating a list, simply use brackets [] or the list() builtin to create list as one of the elements of the outer list.
+# the simple case - one nested list
+nested_list_example_0 = ['this','is','list','has','a',['nested','list']]
+
+# a list with two nested lists
+nested_list_example_1 = [['a', 'b', 'c'], [1, 2, 3]]
+You can also create a list of empty lists:
+nested_list_example_2 = [list(), list(), list()]
+# or
+nested_list_example_3 = [[], [], []]
+----
+Accessing a nested list
+Accessing an element within a nested list is quite intuitive once it is explained clearly. Take the below example:
+nested_list = [['a', 'b', 'c'], [1, 2, 3]]
+element_within_nested_list = nested_list[0][1]
+print(element_within_nested_list)
+You know that in order to access the first element of nested_list, you would used nested_list[0]. Since the first element of nested_list is itself another list, you simply append a set of brackets with the appropriate index to access an element of the nested list - i.e. nested_list[0][<index_of_element_in_nested_list>]. In the same vein, if you wanted to access the 2 in the second nested list, you would use nested_list[1][1].
+----
+Slicing a nested list
+Slicing a nested list follows the same convention as slicing a "regular" list, the only change is you have to "index into" the outer list, and then use normal indexing rules on the nested list.
+start = 10
+end = 21
+
+num_list = list(range(start, end))
+overall_list = [['a', 'b', 'c'], num_list, [6, 7, 8]]
+
+sublist = overall_list[1][2:7]
+print(sublist)
+=========
+1
+Create a 2D nested `list`
+Create a list named two_nested_lists whose first inner list is ['Godel','Gauss','Cantor'] and whose second inner list is ['are','great','mathematicians'].
+--
+# create your list below
+two_nested_lists = [['Godel','Gauss','Cantor'], ['are','great','mathematicians']]
+-
+two_nested_lists = [['Godel','Gauss','Cantor'], ['are','great','mathematicians']]
+Two nested lists that reside within one outer list.
+--
+2
+Accessing an element within a nested `list`
+Submitted on Today at 9:33 PM
+Given the list: almost_done = [['this'], 'is', ['a',['test','of']],'will'], what would be the correct way to access of element?
+-almost_done[2][1][1] - correct answer. Indexes into ['a',['test','of']] first, then indexes into ['test','of'], and accesses 'of', which is the second element and therefore is at index 1.
+almost_done[2][1][2] - Throws an error since ['test','of'] doesn't have 3 elements.
+almost_done[2][3][1] - Throws an error since ['a',['test','of']] doesn't have 4 elements.
+almost_done[1][0][1] - Throws and error since 'is' isn't a list, and thus can't be indexed.
+--
+3
+Tell if something is in a nested `list`
+Given the list: dear_god = [list(range(10, 60, 10)), [list(range(10, 60, 10))]], which of the following would return True?
+60 in dear_god[0] - 60 won't be anywhere since the stop parameter of range is non-inclusive.
+30 not in dear_god[2] - Throws an error since dear_god doesn't have 3 elements.
+20 in dear_god[1][0] - Correct. If you have trouble understanding why, break it down as follows:
+first_nest = dear_god[1]
+second_nest = first_nest[0]
+
+20 in second_nest
+20 not in dear_god[0][1] - This is effectively the same as saying 20 in 20 which throws an error since integers aren't iterable.
+=========
+'''
+* Create a nested list.
+* Access an element from with a nested list.
+'''
+
+# the simple case - one nested list
+nested_list_example_0 = ['this','is','list','has','a',['nested','list']]
+
+# a list with two nested lists
+nested_list_example_1 = [['a', 'b', 'c'], [1, 2, 3]]
+
+
+
+nested_list_example_2 = [list(), list(), list()]
+# or
+nested_list_example_3 = [[], [], []]
+
+
+
+nested_list = [['a', 'b', 'c'], [1, 2, 3]]
+element_within_nested_list = nested_list[0][1]
+print(element_within_nested_list)
+
+
+
+start = 10
+end = 21
+
+num_list = list(range(start, end))
+overall_list = [['a', 'b', 'c'], num_list, [6, 7, 8]]
+
+sublist = overall_list[1][2:7]
+print(sublist)
+
+int_string = [[1,2,3,4,5], ['a','b','c','d','e']]
+print(int_string)
+print(int_string[0])
+print(int_string[1])
+angka = int_string[0]
+huruf = int_string[1]
+print(angka)
+print(huruf)
+print(int_string[1][1])
+print(angka[2])
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
