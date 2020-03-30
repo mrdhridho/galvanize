@@ -1,0 +1,100 @@
+List membership
+Learning Objectives
+By the end of this lesson you will be able to:
+Determine if an element is part of a list.
+Determine if an element is not part of a list.
+--------------------
+list Membership
+When presented with a list, oftentimes we will need to decide if some element is either part of the list, or else is explicitly not part of the list. There are a few ways to determine this:
+----Using in-----
+The in keyword can by used to check whether an element is in a list.
+element in list
+# or
+bool_result = element in list
+--
+...where:
+
+element, an element for which we are searching in the list.
+list, a list in which we are searching.
+bool_result (optional), a bool value, in which we can save the result of the element in list expression.
+==
+operating_systems = ['Windows', 'Linux', 'MacOS', 'Android']
+
+# success case
+OS_is_present = 'Linux' in operating_systems
+print(OS_is_present)
+
+# failure case
+OS_is_present = 'FreeBSD' in operating_systems
+print(OS_is_present)
+==
+----Using not in--------
+The not in combination works, as you woud imagine, in the exact opposite way that in works; if an element is not in a list then <element> not in <list_name> will return True. Similarly, if an element is in a list, then <element> not in <list_name> will return False.
+element not in list
+# or
+bool_result = element not in list
+...where:
+element, an element for which we are searching in the list.
+list, a list in which we are searching.
+bool_result (optional), a bool value, in which we save the result of the element not in list expression
+Take a look at some examples below:
+
+recipe_contents = ['Sugar', 'Flour', 'Eggs', 'Butter']
+
+# success case (meaning element is NOT in list)
+ingredient_not_present = 'Chocolate Chips' not in recipe_contents
+print(ingredient_not_present)
+
+# failure case (meaning element IS in list)
+ingredient_not_present = 'Eggs' not in recipe_contents
+print(ingredient_not_present)
+=====
+Using `in`
+If you had a list whose defintion was your_list = list(range(10)) + list(range(50, 65, 5)), what would the expression 65 in your_list return?
+--
+your_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 50, 55, 60] and since 65 is not in that list, the answer is False.
+=====
+What would be the result of the following expression:
+
+first_list = list(range(-100, 1, 10))
+second_list = list(range(0, 101, 10))
+joined_lists = first_list + second_list + [11]
+
+11 in joined_lists
+--
+Since [11] was used to create joined_list, it would be in the final list.
+======
+'''
+* Determine if an element is part of a `list`.
+* Determine if an element is not part of a `list`.
+'''
+operating_systems = ['Windows', 'Linux', 'MacOS', 'Android']
+
+# success case
+
+OS_is_present = 'Linux' in operating_systems
+print(OS_is_present)
+
+# failure case
+OS_is_present = 'FreeBSD' in operating_systems
+print(OS_is_present)
+
+print('-------------------------')
+
+recipe_contents = ['Sugar', 'Flour', 'Eggs', 'Butter']
+# success case (meaning element is NOT in list)
+ingredient_not_present = 'Chocolate Chips' not in recipe_contents
+print(ingredient_not_present)
+
+# failure case (meaning element IS in list)
+ingredient_not_present = 'Eggs' not in recipe_contents
+print(ingredient_not_present)
+
+
+
+
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
