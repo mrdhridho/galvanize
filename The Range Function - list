@@ -82,7 +82,7 @@ print(range(start, stop, step))
 
 print(type(range(10)))
 
-
+print(list(range(start,stop,step)))
 
 
 # a list created by using range from 0 to 100, incrementing by 1
