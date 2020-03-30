@@ -1,0 +1,106 @@
+Access a portion, or "slice" of a list
+Save the accessed slice into a "sublist"
+In the event that we have a list, we may need to access a portion of this list. Furthermore, we may need to save this portion into a separate variable which we will call a "sublist".
+
+Slicing into and viewing or subsetting a list is a very useful tool, and you know most of what is needed to perform this on your own (understanding indices gets you most of the way there).
+
+General Syntax:
+list[start: stop]
+#or
+list[negative_start: negative_stop]
+...where:
+start, is an index, at which our "slice" will begin.
+stop, is also an index, before which our "slice" will end.
+Thus, start will be included, but stop will not be.
+OR:
+negative_start, is a negative index, at which our "slice" will begin.
+negative_stop, is also a negative index, after which our "slice" will end
+Thus, negative_start will be included, but negative_stop will not be.
+---
+a = 20
+n = 40
+
+num_list = list(range(a, n))
+
+print(num_list[0:5])
+print(num_list[10:])
+print(num_list[7:14])
+
+# Note that element at index -1 is not shown when slicing num_list
+# up until that index
+print(num_list[-1])
+print(num_list[-7:-1])
+---
+Additionally, you can omit the start index if you want to start at the beginning of the list into which you will index. For example:
+---
+start = 5
+stop = 15
+so_many_lists = list(range(start, stop))
+
+# get the first 5 elements
+print(so_many_lists[:5])
+
+# works with negative indexing as well - the below returns all elements except the last one
+print(so_many_lists[:-1])
+---
+Similarly, if the index that you want to end on is the end of the list into which you are indexing, you can omit the stop index when you slice. For example:
+---
+im_starting_to_hate_lists = list(range(10, 20))
+
+# get the last 5 elements
+print(im_starting_to_hate_lists[5:])
+
+# works with negative indexing as well
+print(im_starting_to_hate_lists[-5:])
+---
+Once you have list slicing down, creating a sublist is as simple as assigning the slicing expression to a new variable.
+
+General Syntax:
+---
+sublist = list[start: stop]
+#or
+sublist = list[negative_start: negative_stop]
+---
+...where:
+sublist, in both cases, stores, in a new variable, the result of slicing the original list.
+Note: Modifying the original list will not affect the sublist, or vice-versa.
+---
+Below are some examples:
+a = 10
+n = 20
+
+num_list = list(range(a, n))
+
+num_sublist = num_list[0:5]
+
+num_sublist[0] = 900
+print(num_list[0])
+print(num_sublist[0])
+----
+Slicing a `list`
+Submitted on Today at 8:42 PM
+--
+not_another_one[:-10] - returns a slice from the beginning of the not_another_one up to but not including the element at the -10 index.
+not_another_one[:9] - close, but missing one element.
+not_another_one[:10] - correct answer - returns the first 10 elements.
+not_another_one[:-41] - also close, but missing the same element as the second option (thought experiment: what does this tell you about the second and fourth options?)
+---
+Creating a "sublist"
+---
+Use slicing to create a new list called okay_i_get_it, whose contents are the middle three numbers of enough_already.
+
+Note:
+
+slicing can be done using positive or negative indicies
+-
+# don't change the line below this comment
+enough_already = list(range(-100, 101))
+-
+# don't change the line below this comment
+enough_already = list(range(-100, 101))
+okay_i_get_it = enough_already[99:-99]
+---
+okay_i_get_it = enough_already[99:102]
+# or
+okay_i_get_it = enough_already[-102:-99]
+Above are the two ways of doing this - one using positive indices and one using negative indices.
