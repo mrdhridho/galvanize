@@ -1,0 +1,132 @@
+Appending to a list
+Learning Objectives
+By the end of this lesson you will be able to:
+
+Append new elements to a list
+
+
+
+some_list.append(x)
+
+See this repl  Appending simply places a new value at the end of the list. Only one item may be appended at a time using append().
+
+a = 10
+n = 20
+
+# generate a list within a specific range
+num_list = list(range(a, n))
+print(num_list)
+
+# append a new item to the list
+num_list.append('duck')
+print(num_list)
+# a function that takes input from a user to append a new item to a list
+some_list = ['dog', 'cat', 'bear']
+print(some_list)
+
+def append_input(a_list):
+    b_list = a_list[:]
+    b_list.append(input('Enter the new element you would like to append: '))
+    return b_list
+
+another_list = append_input(some_list)
+
+print(another_list)
+append()ing a list to a list
+If one list is appended to another list, a nested list will occur. Run this example to explore the concept of a nested list.
+
+list1 = [1,2,3]
+list2 = [3,4,5]
+
+list1.append(list2)
+
+print(list1)
+
+
+
+1
+Append to a List Function 1
+Write a function called append_three_elements. This function takes four arguments as parameters, is a list that we will be appending to, and the next three values to be added to the list, a, b, and c respectively. This function should return a new list with the three values appended in order at the end.
+
+For example,
+
+append_three_elements([], 1, 2, 3)
+you would expect to return
+
+[1, 2, 3]
+--
+my answer
+# define your function here
+def append_three_elements(listed1,a,b,c):
+    listed = listed1.copy()
+    listed.append(a)
+    listed.append(b)
+    listed.append(c)
+    return listed
+ --
+ def append_three_elements(lst, a, b, c):
+    lst1 = lst.copy()
+
+    lst1.append(a)
+    lst1.append(b)
+    lst1.append(c)
+
+    return lst1
+Notice that each append must be performed separately
+==================
+'''
+* Append new elements to a list
+'''
+a = 10
+n = 20
+
+# generate a list within a specific range
+num_list = list(range(a, n))
+print(num_list)
+
+# append a new item to the list
+num_list.append('duck')
+print(num_list)
+
+
+
+
+# a function that takes input from a user to append a new item to a list
+some_list = ['dog', 'cat', 'bear']
+print(some_list)
+
+def append_input(a_list):
+    b_list = a_list[:]
+    b_list.append(input('Enter the new element you would like to append: '))
+    return b_list
+
+another_list = append_input(some_list)
+
+print(another_list)
+
+
+
+list1 = [1,2,3]
+list2 = [3,4,5]
+
+list1.append(list2)
+
+print(list1)
+'''
+
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
+
+q = 1
+w = 5
+qw = list(range(1,6))
+print(qw)
+qw.append('gaga')
+print(qw)
+
+we = list(range(q,w))
+qw.append(we)
+print(qw)
+
+====
