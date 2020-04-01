@@ -1,0 +1,44 @@
+Unpack a list
+Learning Objectives
+By the end of this lesson you will be able to:
+
+Unpack a short list into multiple variables
+
+
+
+Unpacking a list
+If you have a some short list, you can easily dump the values of that list into a series of variables.
+
+# create a list
+some_list = ['man', 'bear', 'pig']
+
+# unpack the list
+man, bear, pig = some_list
+
+# # equivalent to
+# man = some_list[0]
+# bear = some_list[1]
+# pig = some_list[2]
+
+# show that the variables represent the values of the list
+print(man)
+print(bear)
+print(pig)
+Although unpacking is easily accomplished for short lists, it is not always practical when dealing with lists of any significant length. Think of unpacking, in this case, as being a quick and easy way to get values from a list into some variables. Also note the multiple assignment on one line that occurs with man, bear, pig = some_list. Such syntactic sugar can make code more readable and compact.
+
+
+
+
+1
+Copy a List Function 1
+Write a function called list_unpacker. This function takes one parameter, a list of length 3, as an argument. The function should return the 3 values from the list, in the order the are found in the list.
+
+Note:
+
+There are multiple ways to do this, but try to use list unpacking within the function.
+It is possible to return more than one value out of a function.
+--
+def list_unpacker(lst):
+    a, b, c = lst
+    return a, b, c
+This is a simple demonstration of list unpacking.
