@@ -1,0 +1,96 @@
+Creating sublists with slicing
+Learning Objectives
+By the end of this lesson you will be able to:
+
+Create a sublist from a list
+
+
+
+list slicing
+See this repl  for the examples. You have seen list slicing already, as an alternative to using the .copy() method. list slicing provide a range of values within an existing list. The syntax is simple: some_list[low_index:high_index:step_value]. Note that the high_index is NOT included in the sublist.
+
+some_list = [1, 3, 5, 7, 9, 11, 13]
+
+# create a sublist of the third and fourth elements
+sublist = some_list[2:4]
+
+print(sublist)
+
+
+
+the step_value in a slice
+
+The step_value defaults to 1, and so it is not necessary to include it in many cases. However, if you want every other value of a list, that is easily accomplished.
+
+humans_and_animals = ['Brad Pitt', 'seagull', 'Sammy Davis Jr', 'cat', 'Thurston Moore', 'crane']
+
+humans = humans_and_animals[0:len(humans_and_animals):2]
+print(humans)
+
+animals = humans_and_animals[1:len(humans_and_animals):2]
+print(animals)
+
+
+
+1
+Sublist Function 1
+Submitted on Today at 7:44 PM
+Write a function called every_third_from_list. This function will take a list as an argument. This function should use slicing to return a new list containing every third element of the passed in list.
+
+For example, given the input list:
+
+some_list = ['ford', 'taurus', '1997', 'chevy', 'malibu', '2003', 'amish', 'buggy', '1857']
+you would expect to return
+
+['1997', '2003', '1857']
+--
+my answer
+# define your function here
+def every_third_from_list(some_list):
+        some_list = ['ford', 'taurus', '1997', 'chevy', 'malibu', '2003', 'amish', 'buggy', '1857']
+        return some_list[2::3]
+---
+galvanize answer
+def every_third_from_list(lst):
+    return lst[2::3]
+The third value (3) is the step value that will give every third element.
+=====
+'''
+* Create a sublist from a `list`
+'''
+
+some_list = [1, 3, 5, 7, 9, 11, 13]
+
+# create a sublist of the third and fourth elements
+sublist = some_list[2:6]
+
+print(sublist)
+
+
+
+
+humans_and_animals = ['Brad Pitt', 'seagull', 'Sammy Davis Jr', 'cat', 'Thurston Moore', 'crane']
+
+humans = humans_and_animals[0:len(humans_and_animals):2]
+print(humans)
+
+animals = humans_and_animals[1:len(humans_and_animals):2]
+print(animals)
+
+print('=========================')
+
+huruf_dan_angka = [1,'a','b',2,'c',3,4,5]
+print(huruf_dan_angka)
+print(huruf_dan_angka[::2])
+print(huruf_dan_angka[1:5:])
+print(huruf_dan_angka[:7:3])
+
+def every_third_from_list(some_listt):
+      some_listt = ['ford', 'taurus', '1997', 'chevy', 'malibu', '2003', 'amish', 'buggy', '1857']
+      listed = some_listt[::3]
+      return listed
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
