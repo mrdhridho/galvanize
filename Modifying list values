@@ -1,0 +1,48 @@
+Modifying list values
+Learning Objectives
+By the end of this lesson you will be able to:
+
+Modify values in a list using indexing
+
+Modifying values in a list
+Recall that each item in a list has an index. In this sense, lists can be considered ordered collections. This characteristic comes in handy when one desires to change a value within the list. lists in Python are zero-indexed, so the first element is at index 0, and the last element is at the index defined by the length of the list, minus 1.
+--
+list_of_birds = ['peacock', 'rooster', 'bluejay', 'cardinal']
+
+print(f'the first bird in the list is a {list_of_birds[0]}')
+print(f'the second bird in the list is a {list_of_birds[1]}')
+print(f'the third bird in the list is a {list_of_birds[2]}')
+print(f'the fourth bird in the list is a {list_of_birds[3]}')
+--
+Modifying any of these elements is as easy as accessing the element by index, and assigning a new value with the = operator.
+--
+list_of_birds = ['peacock', 'rooster', 'bluejay', 'cardinal']
+
+# modify the first element
+list_of_birds[0] = 'sparrow'
+
+print(f'the first bird in the list is a {list_of_birds[0]}')
+print(f'the second bird in the list is a {list_of_birds[1]}')
+print(f'the third bird in the list is a {list_of_birds[2]}')
+print(f'the fourth bird in the list is a {list_of_birds[3]}')
+--
+Challenges
+Each lesson must have one or more challenges. These challenge can be spread out in between content, or can be at the end of the lesson
+
+1
+List Modification Function 1
+Submitted on Today at 1:14 PM
+Write a function called modify_third_elem that takes two arguments. The first argument is a list that is at least length 3, and the second argument is an element that will replace the item in the 3rd position of the list. This function will return the modified list.
+--
+# define your function here
+def modify_third_elem(list1,elem):
+    elemen = list1.copy()
+    elemen[2] = elem
+    return elemen
+    --
+ --
+ def modify_third_elem(lst, elem):
+    lst2 = lst.copy()
+    lst2[2] = elem
+    return lst2
+Notice here that the .copy() method is applied. Although not necessary in this instance, it is generally a best practice to modify and return a copy of a list that is passed in as an argument to a function. The next lesson discusses further the copy() method.
