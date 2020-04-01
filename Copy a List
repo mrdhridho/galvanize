@@ -1,0 +1,150 @@
+Copy a List
+Learning Objectives
+By the end of this lesson you will be able to:
+
+Create distinct copies of lists
+Utilize list copying within functions that take lists as arguments
+======
+Copy a list with .copy()
+======
+Simply, the .copy() method creates a distinct copy of a list. Consider the following examples.
+----
+# Create and list and attach it to another name
+list_a = ['dog', 'cat', 'frog']
+list_b = list_a
+
+# Append a new item to the new list
+list_b.append('ferret')
+
+# Note that both variables are affected
+print(list_a)
+print(list_b)
+# use .copy() in order to avoid updating both names
+list_c = ['owl', 'dog', 'beaver']
+list_d = list_c.copy()
+
+# Append a new item to the new list
+list_d.append('dolphin')
+
+# Note that only list_d is affected
+print(list_c)
+print(list_d)
+-----
+Best Practice: Don't modify the parameters in a function
+In general, a value that is passed into a function as an argument should not be directly modified. Instead, create a copy of that argument under a different name, and then modify the copy. This function will use a for-loop, which you have not seen yet. Don't worry about that just yet, just notice that each value in the list copy is incremented by 1, before it is returned.
+---
+def add_one_to_each(list_of_nums):
+    nums = list_of_nums.copy()
+
+    for index in range(len(nums)):
+        nums[index] += 1
+
+    return nums
+
+some_list = [1, 2, 3, 4, 5]
+
+modified_list = add_one_to_each(some_list)
+
+print(modified_list)
+----
+A common alternative to copy()
+Many Python programmers prefer to not use copy(), and instead use list slicing to copy a lists. list slicing is explored in this unit, for now, just note the following syntax for creating list copies.
+
+# the following syntax creates a 'sublist' containing ALL the values
+list_to_copy = ['person', 'car', 'airplane']
+another_list = list_to_copy[:]
+
+another_list.append('building')
+
+print(list_to_copy)
+print(another_list)
+------
+1
+Copy a List Function 1
+Write a function called return_a_list_copy that takes a list as an argument. The function should simply return the copied list.
+--
+jawaban 1
+# define your function here
+def return_a_list_copy(list):
+    listed = list.copy()
+    return listed
+ ----
+ jawaban 2
+ def return_a_list_copy(lst):
+    return lst.copy()
+# or
+def return_a_list_copy(lst):
+    lst_copy = lst[:]
+    return lst_copy
+Either solution should be fine. The primary way to know that the list is a copy is that it will have a different id()
+-----
+# Create and list and attach it to another name
+list_a = ['dog', 'cat', 'frog']
+list_b = list_a
+
+# Append a new item to the new list
+list_b.append('ferret')
+
+# Note that both variables are affected
+print(list_a)
+print(list_b)
+
+
+
+
+# use .copy() in order to avoid updating both names
+list_c = ['owl', 'dog', 'beaver']
+list_d = list_c.copy()
+
+# Append a new item to the new list
+list_d.append('dolphin')
+
+# Note that only list_d is affected
+print(list_c)
+print(list_d)
+
+
+
+
+def add_one_to_each(list_of_nums):
+    nums = list_of_nums.copy()
+
+    for index in range(len(nums)):
+        nums[index] += 1
+    
+    return nums
+
+some_list = [1, 2, 3, 4, 5]
+
+modified_list = add_one_to_each(some_list)
+
+print(modified_list)
+
+
+
+
+# the following syntax creates a 'sublist' containing ALL the values
+list_to_copy = ['person', 'car', 'airplane']
+another_list = list_to_copy[:]
+
+another_list.append('building')
+
+print(list_to_copy)
+print(another_list)
+
+
+list_satu = [1,2,3,4,5]
+list_dua = list_satu
+
+list_dua.append(6)
+print(list_satu)
+print(list_dua)
+
+list_tiga = ['a','b','c']
+list_empat = list_tiga.copy()
+print(list_tiga)
+print(list_empat)
+list_empat[2] = 'd'
+list_empat.append('e')
+print(list_tiga)
+print(list_empat)
