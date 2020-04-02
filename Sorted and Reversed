@@ -1,0 +1,171 @@
+Sorted and Reversed
+
+
+
+Learning Objectives
+By the end of this lesson you will be able to:
+
+Apply the sorted() function.
+Apply the reversed() function.
+
+
+
+Sorted and Reversed
+Two other functions that are often used on lists are sorted() and reversed(). Both of these functions do not alter the list that is used as input inplace, but rather return a copy of the list that was used as input. As you can imagine, sorted() will return a sorted version of a list, while reversed() will return the a list with the elements in reversed order.
+
+Using sorted()
+
+
+
+General Syntax:
+sorted(<input_list>)
+...where:
+
+sorted() is the function we are calling. It will return a new list of some_list, sorted in ascending order.
+<input_list> is a list we are passing to our function call. It will not be affected by the function call.
+Run the following code using this repl 
+
+str_list = ['z','l', 'j', 'q']
+newly_sorted = sorted(str_list)
+
+# newly sorted list
+print(newly_sorted)
+# original list, not affected
+print(str_list)
+numbers = [5, 7, 2, 19, 1]
+newly_sorted = sorted(numbers)
+
+# newly sorted list
+print(newly_sorted)
+# original list, not affected
+print(numbers)
+The sorted function has some optional arguments. For example, if you want to sort a list in descending order, you can specify reverse = True. Run the code below to see this for yourself.
+
+numbers = [5, 7, 2, 19, 1]
+newly_sorted = sorted(numbers, reverse = True)
+print(newly_sorted)
+Using reversed()
+
+
+
+General Syntax:
+reversed(<input_list>)
+...where:
+
+reversed() is the function we are calling, and will return a new iterable of <input_list>, with its order reversed. Note that reversed() doesn't return a list object by default; you would have to cast the output as a list using list().
+
+<input_list> is a list we are passing to our function call. It will not be affected by the function call.
+
+Run the following code to get used to the syntax of reversed():
+
+str_list = ['a', 'b', 'c', 'd']
+newly_reversed = reversed(str_list)
+
+# newly reversed iterable
+print(newly_reversed)
+# newly reversed iterable, made into a list
+print(list(newly_reversed))
+# original list, not affected
+print(str_list)
+numbers = [1, 2, 3, 4]
+newly_reversed = reversed(numbers)
+
+# newly reversed iterable
+print(newly_reversed)
+# newly reversed iterable, cast as a list
+print(list(newly_reversed))
+# original list, not affected
+print(numbers)
+
+
+
+Challenges
+1
+Sorted and Reversed
+Submitted on Today at 8:22 PM
+Given the following code, what would print to the console?
+
+lst = [5, 4, 9, 3, 1, 0]
+sorted(lst)
+print(lst)
+[5, 4, 9, 3, 1, 0]
+Correct
+RESET INPUT
+CHECK ANSWER
+The sorted function does not change a list in place. Therefore, printing lst will just return the original list.
+
+See a video solution to the challenge above  
+
+2
+Sorted and Reversed
+Submitted on Today at 8:25 PM
+Given the following code, what would print to the console?
+
+lst = [5, 4, 9, 3, 1, 0]
+print(list(reversed(lst)))
+[0, 1, 3, 9, 4, 5]
+Correct
+RESET INPUT
+CHECK ANSWER
+The reversed function will return the reverse of the original list.
+------
+======
+'''
+* Apply the sorted() function
+* Apply the reversed() functions
+'''
+str_list = ['z','l', 'j', 'q']
+newly_sorted = sorted(str_list)
+
+# # newly sorted list
+print(newly_sorted)
+# original list, not affected
+print(str_list)
+
+numbers = [5, 7, 2, 19, 1]
+newly_sorted = sorted(numbers)
+
+# # newly sorted list
+print(newly_sorted)
+# # original list, not affected
+print(numbers)
+
+numbers = [5, 7, 2, 19, 1]
+newly_sorted = sorted(numbers, reverse = True)
+print(newly_sorted)
+
+str_list = ['a', 'b', 'c', 'd']
+newly_reversed = reversed(str_list)
+
+# # newly reversed iterable
+print(newly_reversed)
+# # newly reversed iterable, made into a list
+print(list(newly_reversed))
+# # original list, not affected
+print(str_list)
+
+numbers = [1, 2, 3, 1, 4]
+newly_reversed = reversed(numbers)
+
+# newly reversed iterable
+print(newly_reversed)
+# newly reversed iterable, cast as a list
+print(list(newly_reversed))
+# original list, not affected
+print(numbers)
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
+some_ints = [3,2,3,2,1,11,2,97645,535]
+print(some_ints)
+print(sorted(some_ints))
+some_strs = ['gaga','a','b','A','B','FA']
+print(sorted(some_strs, reverse = True))
+print(sorted(some_strs, reverse = False))
+
+lst = [5, 4, 9, 3, 1, 0]
+sorted(lst)
+print(lst)
+print(list(reversed(lst)))
+--
