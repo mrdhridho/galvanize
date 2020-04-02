@@ -1,0 +1,87 @@
+Max and Min
+
+
+
+Learning Objectives
+By the end of this lesson you will be able to:
+
+Apply the max() function.
+Apply the min() function.
+
+
+
+max() and min()
+
+Two functions that are also frequently used are max() and min(). max() finds the maximum value in a list and min() finds the minimum value in a list.
+
+Using max()
+General Syntax:
+max(<input_list>)
+...where:
+
+max() is the function we are calling, and will return the maximum value in <input_list>.
+
+<input_list> is a list we are passing to our function call. It will not be affected by the function call.
+
+Run the following code in this repl 
+
+numbers = [1, 3, 4, 6, 2]
+max_num = max(numbers)
+
+print(max_num)
+a = 30
+n = 90
+
+num_list = list(range(a, n))
+print('max:', max(num_list))
+Using min()
+General Syntax:
+min(<input_list>)
+...where:
+
+min() is the function we are calling, and will return the minimum value in <input_list>.
+
+<input_list> is a list we are passing to our function call. It will not be affected by the function call.
+
+Run the following examples to understand how min() works.
+
+numbers = [3, 1, 4, 6, 2]
+min_num = min(numbers)
+
+print(min_num)
+a = 30
+n = 90
+
+num_list = list(range(a, n))
+print('min: ', min(num_list))
+multiple_min = [-1, 7, 3, 6, -1, 9, 10, -1]
+print(min(multiple_min))
+
+
+
+Challenges
+1
+Max and Min
+Submitted on Today at 8:43 PM
+Given the following code, what would print to the console?
+
+nums_lst = [3, 5, 1.9, 7.3]
+print(max(nums_lst))
+7.3
+Correct
+RESET INPUT
+CHECK ANSWER
+The maximum value in the list is 7.3
+
+2
+Sorted and Reversed
+Submitted on Today at 8:43 PM
+Given the following code, what would print to the console?
+
+lst = [-5, 13, 2, -4, 1, 0]
+print(min(lst))
+-5
+Correct
+RESET INPUT
+CHECK ANSWER
+The minimum value in the list is -5
