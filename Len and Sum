@@ -1,0 +1,158 @@
+Len and Sum
+Learning Objectives
+By the end of this lesson you will be able to:
+
+Apply the len() function.
+Apply the sum() function.
+
+
+
+len()and sum()
+Two functions that you will be using quite often are len() and sum(). len() will return the length of a list and sum() will add up all the contents of the list, as long as the list only contains numeric types.
+
+
+
+
+Using the len() function
+
+
+
+len() returns the number of elements in a list.
+
+General Syntax:
+len(<list_name>)
+...where:
+len() is the function we are calling, and will return the length of the input list.
+<list_name> would be replaced by the lists variable name
+Run the following code in this repl 
+
+numbers = [1, 2, 3, 4, 5]
+
+print(len(numbers))
+
+print(len(list(range(10))))
+
+
+
+Using the sum() function
+
+The sum function does exactly what it sounds like - it calculates the sum of all the elements of the passed in list. The function works with lists that contain only numeric-typed data.
+
+
+
+General Syntax:
+sum(<list_name>)
+...where:
+sum() is the function we are calling, and will return the sum of the numbers within the list.
+<list_name> would be replaced by the lists variable name
+Run the following code to get a feel for the syntax:
+
+numbers = [1, 2, 3, 4, 5]
+
+print(sum(numbers))
+a = 10
+n = 20
+
+num_list = list(range(a, n)) # not inclusive of n
+print(sum(num_list))
+
+
+
+Challenges
+1
+len() and sum()
+Submitted on Today at 5:08 PM
+Given the following list, enter its length.
+
+list_of_lists = [[1, 2, 3], [1.0, 2.0, 3.0]]
+2
+Correct
+RESET INPUT
+CHECK ANSWER
+The list consists of two nested lists. Therefore the length of the list will be 2 because there are two elements in the list that len() is being called on.
+
+See a video solution to the challenge above  
+
+2
+len() and sum()
+Submitted on Today at 5:09 PM
+Given the following code, what will get printed to the console?
+
+list_to_sum = [112, 115, 276, 431]
+print(sum(list_to_sum))
+934
+Correct
+RESET INPUT
+CHECK ANSWER
+112 + 115 + 276 + 431 = 934
+
+See a video solution to the challenge above  
+
+3
+len() and sum()
+Submitted on Today at 5:12 PM
+Given this list of daily high temperatures:
+
+daily_temps = [61.2, 59.0, 59.4, 58.9, 60.1, 55.3, 55.6]
+Calculate the average high for this week.
+
+Note:
+
+You are trying to calculate the mean of this list.
+Use the sum() and len() functions to do this.
+Give the exact answer that appears when you calculate the answer in python.
+58.50000000000001
+Correct
+RESET INPUT
+CHECK ANSWER
+Use sum(daily_temps)/len(daily_temps) to calculate the mean.
+============
+'''
+* Apply the len() function
+* Apply the sum() functions
+'''
+numbers = [1, 2, 3, 4, 5]
+
+print(len(numbers))
+
+
+
+
+numbers = [1, 2, 3, 4, 5]
+
+print(sum(numbers))
+
+
+lst = ['a', '']
+bool_list = list(map(bool, lst))
+print(bool_list)
+
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
+some_str = 'the cat is running'
+print(some_str)
+print(len(some_str))
+to_list = list(some_str)
+print(to_list)
+print(len(some_str))
+print(sum(numbers))
+
+a = 10
+n = 20
+
+num_list = list(range(a, n)) # not inclusive of n
+print(sum(num_list))
+
+
+list_of_lists = [[1, 2, 3], [1.0, 2.0, 3.0]]
+print(len(list_of_lists))
+
+list_to_sum = [112, 115, 276, 431]
+print(sum(list_to_sum))
+
+daily_temps = [61.2, 59.0, 59.4, 58.9, 60.1, 55.3, 55.6]
+rata_rata = sum(daily_temps) / len(daily_temps)
+print(rata_rata)
+---
