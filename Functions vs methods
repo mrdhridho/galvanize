@@ -1,0 +1,112 @@
+ the end of this lesson you will be able to:
+
+Distinguish between functions and methods
+
+
+
+Functions
+
+
+
+A function is a sequence of instructions that perform a specific task. Functions are a basic construct of abstraction, and allow for more granular processes to be easily reproducible. In other words, by defining a function in a snippet of code, one can then utilize that process over and over again by calling the function by name. Functions often take in some sort of data as input, and then perform operations using those inputs. When defining the function, the names used to represent passed in data are referred to as parameters. When actually using, or calling the function, the data passed in are referred to as arguments.
+
+To see a list of the Python built-in functions (you should be familiar with all of these before long), check out https://docs.python.org/3/library/functions.html  .
+
+The syntax for defining a function is:
+
+def some_function(parameter_1, parameter2):
+    return parameter_1 + parameter_2
+The syntax for calling a function is:
+
+argument_1 = 1
+argument_2 = 2
+
+function_name(argument_1, argument_2)
+Run the following code in this repl  :
+
+nums_list = [1, 2, 3, 4]
+
+# function calls:
+print(len(nums_list))
+print(sum(nums_list))
+Methods
+In Python, most things, such as lists, ints, floats, etc., are referred to as objects. A method is a function that is associated with an object, and is called using dot notation. Dot notation takes the form of <object_name>.<method_name>(). For example, my_list.append() would be how you call the append() method that is associated with my_list.
+
+An object, such as a list, needs to be instantiated in order to use the methods associated with that object. Instantiation simply means "to create an instance of", or declare. For example, instantiating a list can look like this: some_list = [1,2,3,4].
+
+Methods can be thought of as a subset of functions. However, it is in your best interest to differentiate between methods and functions, as there are a few subtle differences between the meanings of those words in Python. Also, you should use the correct vocabulary when communicating with potential employers or coworkers so as to avoid sounding like a novice. One key difference between methods and functions is that a method is implicitly passed the object on which it was called. In many cases, methods will modify an object in-place, whereas functions, in Python, rarely modify the passed-in object.
+
+The data on which methods operate is located in the class definition of that object. Basically, methods that work on lists might not work on strings- they are specific to lists. If you are in the iPython terminal, you can check which methods are associated with the specific object by typing the object's name, followed by a period ("."), and hitting the tab key.
+
+The syntax for calling a method is object_name.method_name().
+
+Run the following code:
+
+nums_list = [1, 4, 3, 2]
+
+# method calls:
+nums_list.pop()
+nums_list.sort()
+
+print(nums_list)
+
+
+
+Challenges
+1
+Functions vs. Methods
+Submitted on Today at 2:59 PM
+Is the code on the second line a function or a method?
+
+empty_list = []
+empty_list.append(1)
+
+Function
+
+
+Method
+
+Correct
+RESET INPUT
+CHECK ANSWER
+This is a method. List methods always use the syntax <list_name>.<method_name>()
+
+2
+Functions vs. Methods 2
+Submitted on Today at 3:06 PM
+Is the code on the second line a function or a method?
+
+strings_list = ['1', '5', '4']
+map(strings_list, int)
+
+Function
+
+
+Method
+
+Correct
+RESET INPUT
+CHECK ANSWER
+Functions have the syntax function_name(parameters).
+====
+'''
+* Distinguish between functions and methods
+'''
+nums_list = [1, 2, 3, 4]
+
+# function calls:
+# print(len(nums_list))
+# print(sum(nums_list))
+
+# print(1)
+
+nums_list = [1, 4, 3, 2]
+
+# method calls:
+nums_list.append([1,2])
+
+print(nums_list)
+'''
+Galvanize Data Science Prep
+https://www.galvanize.com/data-science/prep
+'''
