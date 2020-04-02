@@ -1,0 +1,108 @@
+Removing items from a list
+
+
+
+Learning Objectives
+By the end of this lesson you will be able to:
+
+Remove an item from a list based on its value using .remove()
+Remove an item from a list based on its index using del
+
+
+
+some_list.remove(x)
+
+See this repl 
+The .remove() method will remove a specific-valued element from the list. Note that this only removes the first instance of that element.
+
+fruit_list = ['apple', 'pear', 'peach', 'mango', 'pear']
+
+fruit_list.remove('pear')
+print(fruit_list)
+
+
+
+del some_list[index]
+del can be specified to remove a specific index of element within a list.
+
+num_list = list(range(0, 9))
+
+# remove the last element in the list
+del num_list[-1]
+print(num_list)
+
+
+# remove the fifth element in the list
+del num_list[4]
+print(num_list)
+
+
+# remove a range of elements from a list
+del num_list[2:4]
+print(num_list)
+
+
+
+1
+Remove an Item 1
+Submitted on Today at 1:04 PM
+Write a function called remove_if_in_list that takes two arguments. The first argument is a list and the second argument is the element to be removed. This function should return a list with the element removed.
+
+Note:
+
+The element may not be in the list, so first you need to check to see if it is. If it is in the list, then remove the element.
+For example:
+
+remove_if_in_list(['cat', 'dog', 'fish', 'bird'], 'bird')
+should return:
+
+['cat', 'dog', 'fish']
+PYTHON3.6
+# define your function here
+def remove_if_in_list(first,second):
+    lst = first.copy()
+    if second in lst:
+        lst.remove(second)
+    return lst
+
+Correct
+RESET INPUT
+RUN TESTS
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+def remove_if_in_list(lst, elem):
+    lst1 = lst.copy()
+    if elem in lst1:
+        lst1.remove(elem)
+
+    return lst1
+
+
+2
+Remove an Item 2
+Submitted on Today at 1:06 PM
+Write a function called remove_elem_at_zero that takes a list as an argument. The function should return the list with the first element removed.
+
+PYTHON3.6
+
+Correct
+RESET INPUT
+RUN TESTS
+.
+# define your function here
+def remove_elem_at_zero(alst):
+    lst = alst.copy()
+    del lst[0]
+    return lst
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+def remove_elem_at_zero(lst):
+    lst1 = lst.copy()
+    del lst1[0]
+
+    return lst1
