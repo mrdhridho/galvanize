@@ -1,0 +1,91 @@
+Extending a list
+Learning Objectives
+By the end of this lesson you will be able to:
+
+Use the .extend() method to combine two lists
+
+
+
+some_list.extend(another_list)
+
+.extend() simply puts the contents of one list into another list. See this repl 
+
+a = 10
+n = 20
+
+num_list = list(range(a, n))
+print(num_list)
+
+other_list = [7, 3, 55]
+
+# num_list.append(other_list)
+num_list.extend(other_list)
+
+
+
+1
+Extend a List Function 1
+Submitted on Today at 12:25 PM
+Write a function called extend_lists. This function takes three lists as arguments. This function should return a new list containing all the elements of the three passed in lists. These elements should be in order of the lists as they were passed in.
+
+Note:
+
+You can assume that there are no nested lists
+For example:
+
+extend_lists([1, 2, 3], [4, 5], [6, 7, 8, 9])
+and should return:
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+PYTHON3.6
+# define your function here
+def extend_lists(a,b,c):
+    lst = a.copy()
+    lst.extend(b)
+    lst.extend(c)
+    return lst
+
+Correct
+RESET INPUT
+RUN TESTS
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+def extend_lists(lst1, lst2, lst3):
+    lst123 = []
+    lst123.extend(lst1)
+    lst123.extend(lst2)
+    lst123.extend(lst3)
+
+    return lst123
+Notice that each extend must be performed separately
+=================
+'''
+Use the `.extend()` method to combine two `list`s
+'''
+
+a = 10
+n = 20
+
+num_list = list(range(a, n))
+print(num_list)
+
+other_list = [7, 3, 55]
+
+# num_list.append(other_list)
+num_list.extend(other_list)
+
+
+print(num_list)
+
+daftar_nama = ['ridho','muhammad','ali']
+print(daftar_nama)
+nama_lain = ['sulaiman','idris']
+print(nama_lain)
+daftar_nama.extend(nama_lain)
+print(daftar_nama)
+daftar_nama.extend(['nuh'])
+print(daftar_nama)
+--
